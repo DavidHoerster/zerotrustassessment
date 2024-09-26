@@ -4,11 +4,11 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Zero Trust Assessment',
+  title: 'Microsoft Zero Trust Workshop',
   tagline: 'Check your Microsoft tenant configuration for zero trust readiness.',
   favicon: 'img/favicon.ico',
 
@@ -20,8 +20,9 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'microsoft', // Usually your GitHub org/user name.
+  organizationName: 'DavidHoerster', // Usually your GitHub org/user name.
   projectName: 'zerotrustassessment', // Usually your repo name.
+  deploymentBranch: 'newsite',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
@@ -35,7 +36,13 @@ const config = {
     locales: ['en'],
   },
 
-  plugins: ['./src/plugins/webpack'],
+  plugins: [
+    './src/plugins/webpack',
+    [
+      "@gracefullight/docusaurus-plugin-microsoft-clarity",
+      { projectId: "o7upt47mzp" },
+    ],
+  ],
 
   presets: [
     [
@@ -62,23 +69,48 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Zero Trust Assessment',
+        title: 'Zero Trust Workshop',
         logo: {
           alt: 'Site Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'docsSidebar',
+            to: 'workshop',
             position: 'left',
-            label: 'Docs',
+            label: 'About the Workshop',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'docsSidebar',
+            to: 'guide',
             position: 'left',
-            label: 'About',
+            label: 'Guide',
+          },
+          {
+            type: 'dropdown',
+            position: 'left',
+            label: 'Learn',
+            items: [
+              {
+                label: "Workshop Docs",
+                type: 'docSidebar',
+                sidebarId: 'docsSidebar'
+              },
+              {
+                label: 'Workshop Videos',
+                type: 'doc',
+                docId: 'videos/index'
+              }
+            ]
+          },
+          // {
+          //   to: 'testimonials',
+          //   position: 'right',
+          //   label: 'Testimonials',
+          // },
+          {
+            to: 'https://aka.ms/zerotrust',
+            position: 'right',
+            label: 'Microsoft Zero Trust',
           },
         ],
       },
