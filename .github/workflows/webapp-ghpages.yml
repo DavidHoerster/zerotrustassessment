@@ -3,11 +3,11 @@ name: Web App - GitHub Pages
 on:
   push:
     branches:
-      - main
+      - newsite
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-      - main
+      - newsite
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
