@@ -83,7 +83,7 @@ const config = {
           {
             to: 'guide',
             position: 'left',
-            label: 'Guide',
+            label: 'Plan',
           },
           {
             type: 'dropdown',
