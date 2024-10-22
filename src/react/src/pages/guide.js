@@ -26,7 +26,7 @@ export default function Guide() {
                 <div className="hero-content">
                     <div className="hero-text">
                         <Heading as="h1" className="hero__title">
-                            Zero Trust Workshop Guide
+                            Zero Trust Workshop Plan
                         </Heading>
                         <p>
                             Learn how to run the Microsoft Zero Trust workshop, including step-by-step instructions and best practices. Unsure what Zero Trust is? Click below to find out
@@ -37,7 +37,7 @@ export default function Guide() {
                         </div>
                         <br />
                         <div className="text--left featureBtn action-button">
-                            <Link className="text--center button button--secondary button--lg" href="docs/workshop-guidance/delivery-guide">Plan your own workshop</Link>
+                            <Link className="text--center button button--secondary button--lg" href="docs/workshop-guidance/delivery-guide">Workshop delivery guide</Link>
                         </div>
                     </div>
                     <div className="hero-image">
