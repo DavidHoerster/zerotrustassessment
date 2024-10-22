@@ -29,7 +29,7 @@ export default function Guide() {
                             Zero Trust Workshop Plan
                         </Heading>
                         <p>
-                            Learn how to run the Microsoft Zero Trust workshop, including step-by-step instructions and best practices. Unsure what Zero Trust is? Click below to find out
+                            Learn how to run the Microsoft Zero Trust workshop, including step-by-step instructions and best practices.
                         </p>
                         <br />
                         <div className="text--left featureBtn action-button">
