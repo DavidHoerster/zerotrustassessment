@@ -24,7 +24,7 @@ const FeatureList = [
     buttonDest: 'https://aka.ms/zerotrust',
   },
   {
-    title: 'Why run the Workshop',
+    title: 'Why run the workshop',
     Svg: require('@site/static/img/what-does-workshop-cover.png').default,
     description: (
       <>
